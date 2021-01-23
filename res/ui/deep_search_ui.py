@@ -1,0 +1,102 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'deep_search.ui'
+#
+# Created by: PyQt5 UI code generator 5.12.1
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_dialog(object):
+    def setupUi(self, dialog):
+        dialog.setObjectName("dialog")
+        dialog.resize(526, 467)
+        self.centralwidget = QtWidgets.QWidget(dialog)
+        self.centralwidget.setObjectName("centralwidget")
+        self.gridLayout_3 = QtWidgets.QGridLayout(self.centralwidget)
+        self.gridLayout_3.setObjectName("gridLayout_3")
+        self.gridLayout_2 = QtWidgets.QGridLayout()
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.path_lineEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.path_lineEdit.setReadOnly(True)
+        self.path_lineEdit.setObjectName("path_lineEdit")
+        self.gridLayout_2.addWidget(self.path_lineEdit, 0, 0, 1, 1)
+        self.dir_toolButton = QtWidgets.QToolButton(self.centralwidget)
+        self.dir_toolButton.setObjectName("dir_toolButton")
+        self.gridLayout_2.addWidget(self.dir_toolButton, 0, 1, 1, 1)
+        self.comma_separated_lineEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.comma_separated_lineEdit.setClearButtonEnabled(True)
+        self.comma_separated_lineEdit.setObjectName("comma_separated_lineEdit")
+        self.gridLayout_2.addWidget(self.comma_separated_lineEdit, 1, 0, 1, 1)
+        self.search_pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.search_pushButton.setObjectName("search_pushButton")
+        self.gridLayout_2.addWidget(self.search_pushButton, 1, 1, 1, 1)
+        self.gridLayout = QtWidgets.QGridLayout()
+        self.gridLayout.setObjectName("gridLayout")
+        self.open_with_comboBox = QtWidgets.QComboBox(self.centralwidget)
+        self.open_with_comboBox.setObjectName("open_with_comboBox")
+        self.open_with_comboBox.addItem("")
+        self.open_with_comboBox.addItem("")
+        self.open_with_comboBox.addItem("")
+        self.open_with_comboBox.addItem("")
+        self.gridLayout.addWidget(self.open_with_comboBox, 0, 1, 1, 1)
+        self.open_with_label = QtWidgets.QLabel(self.centralwidget)
+        self.open_with_label.setObjectName("open_with_label")
+        self.gridLayout.addWidget(self.open_with_label, 0, 0, 1, 1)
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout.addItem(spacerItem, 0, 2, 1, 1)
+        self.gridLayout_2.addLayout(self.gridLayout, 2, 0, 1, 1)
+        self.gridLayout_3.addLayout(self.gridLayout_2, 0, 0, 1, 1)
+        self.result_tableWidget = QtWidgets.QTableWidget(self.centralwidget)
+        self.result_tableWidget.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.result_tableWidget.setAlternatingRowColors(True)
+        self.result_tableWidget.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
+        self.result_tableWidget.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
+        self.result_tableWidget.setWordWrap(False)
+        self.result_tableWidget.setObjectName("result_tableWidget")
+        self.result_tableWidget.setColumnCount(3)
+        self.result_tableWidget.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.result_tableWidget.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.result_tableWidget.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.result_tableWidget.setHorizontalHeaderItem(2, item)
+        self.result_tableWidget.horizontalHeader().setHighlightSections(False)
+        self.result_tableWidget.horizontalHeader().setStretchLastSection(True)
+        self.result_tableWidget.verticalHeader().setVisible(False)
+        self.result_tableWidget.verticalHeader().setDefaultSectionSize(21)
+        self.result_tableWidget.verticalHeader().setHighlightSections(False)
+        self.gridLayout_3.addWidget(self.result_tableWidget, 1, 0, 1, 1)
+        self.tip_label = QtWidgets.QLabel(self.centralwidget)
+        self.tip_label.setStyleSheet("color: rgb(136, 138, 133);")
+        self.tip_label.setObjectName("tip_label")
+        self.gridLayout_3.addWidget(self.tip_label, 2, 0, 1, 1)
+        dialog.setCentralWidget(self.centralwidget)
+
+        self.retranslateUi(dialog)
+        QtCore.QMetaObject.connectSlotsByName(dialog)
+
+    def retranslateUi(self, dialog):
+        _translate = QtCore.QCoreApplication.translate
+        dialog.setWindowTitle(_translate("dialog", "Deep Search"))
+        self.path_lineEdit.setPlaceholderText(_translate("dialog", "Path"))
+        self.dir_toolButton.setText(_translate("dialog", "..."))
+        self.comma_separated_lineEdit.setPlaceholderText(_translate("dialog", "Comma Separated Keywords"))
+        self.search_pushButton.setText(_translate("dialog", "Search"))
+        self.open_with_comboBox.setItemText(0, _translate("dialog", "gedit"))
+        self.open_with_comboBox.setItemText(1, _translate("dialog", "code"))
+        self.open_with_comboBox.setItemText(2, _translate("dialog", "atom"))
+        self.open_with_comboBox.setItemText(3, _translate("dialog", "mousepad"))
+        self.open_with_label.setText(_translate("dialog", "Open with:"))
+        item = self.result_tableWidget.horizontalHeaderItem(0)
+        item.setText(_translate("dialog", "File"))
+        item = self.result_tableWidget.horizontalHeaderItem(1)
+        item.setText(_translate("dialog", "Keyword"))
+        item = self.result_tableWidget.horizontalHeaderItem(2)
+        item.setText(_translate("dialog", "Line"))
+        self.tip_label.setText(_translate("dialog", "Tip: Double Click on the Results to Open the File"))
+
+
