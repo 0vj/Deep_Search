@@ -6,6 +6,7 @@ Just clone the repository on your local system and run it.
 
     git clone https://github.com/ArefDev/Deep_Search.git
     cd Deep_Search
+    pip3 install requirements.txt
     python3 deep_search.py
 
 Here you can see a screenshot:
